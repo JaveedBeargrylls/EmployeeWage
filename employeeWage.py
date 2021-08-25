@@ -7,32 +7,46 @@
 '''
 import random
 class EmployeeWage:
-
-    def emply_wage_presence():
-        """
-        Description:
-            Function description to Calculate the Daily Employee Wage 
-        Return:
-            Wage of an Employee per day
-        """
         print ("\nWelcome to the Employee Wage Computation\n")
 
-        #instance Variables
-        wage_per_hour = 20
-        working_hours_in_day = 8
-        employee = 1
+        def emply_wage_presence():
+            """
+            Description:
+                Function description to Calculate the Daily Employee Wage 
+            Return:
+                Wage of an Employee per day
+            """
+            # constant variables
+            wage_per_hour = 20
+            full_time = 1
+            part_time = 2
+            
+            #Variables
+            working_hours = 0
+            wage = 0
+            
+            #Random selection for Full_time & Part_time
+            check = random.randint(1,3)
 
-        # Used RANDOM for Attendance
-        precence = random.randint(0,1)
-            #print (precence)
-        if (precence == 0):
-            wage = wage_per_hour*working_hours_in_day*employee
-            print ("Employee is present")
-            print ("Wage = ",wage)
-        else:
-            employee = 0
-            wage = wage_per_hour*working_hours_in_day*employee
-            print ("Employee is Absent today")
-        
+            #Conditions
+            if check == full_time:
+                print ("Employee worked for Full-Time")
+                working_hours = 8
+            elif check == part_time:
+                print ("Employee worked for Part-Time")
+                working_hours = 4
+            else:
+                print ("Employee is absent")
+
+            #Calculation
+            try:
+                wage = wage_per_hour *working_hours
+                print ("Wage of an Employee :",wage," $")
+                #checking the Exceptions
+                if wage == 0:
+                    print (wage+'$')
+            except:
+                print ("Error at try method Error: printing of invalid varibles")
+
 if __name__ == '__main__':
     EmployeeWage.emply_wage_presence()
