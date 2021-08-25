@@ -1,5 +1,5 @@
-# README file for **Employee Wage Problem*
+# README file for *Employee Wage Problem*
 
 ## Main Branch  
-*- welcome note* <employeeWage.py>
+*   - welcome note* <employeeWage.py>
 
