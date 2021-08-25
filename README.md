@@ -5,3 +5,6 @@
 ----------
 ### **UC-1** Check Employee is Present or Absent
 - *Used Random for Attendance Check*
+----------
+#### **UC-2** Calculating the daily employee wage
+- *Calculating the Daily Employee Wage*
