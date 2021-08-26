@@ -12,6 +12,7 @@ wage_per_hour = 20
 full_time = 2
 part_time = 1
 wage = 0
+working_days = 20
 def switch_statement(check):
     """
 Description:
@@ -30,33 +31,42 @@ Return:
 def emply_wage_presence():
             """
             Description:
-                Function description to Calculate the Daily Employee Wage F/P time
+                Function description to Calculate the Monthly Wage
             Return:
-                Wage of an Employee per day
+                Wage of an Employee per Month
             """
             #switcher
 
             #Variables
             working_hours = 20
+            emply_wage = 0
+            total = 0
+            count = 0
+            f_time = 0
+            p_time = 0
             #wage = 0
             
-            #Random selection for Full_time & Part_time
-            check = random.randint(1,3)
-            wage = switch_statement(check)
-            if (wage == 8):
-                print ("Full-Time Employee wage per day")
-            elif ( wage == 4):
-                print ("Part-Time Employee wage per day")
-            else:
-                print("Employe is Absent")
-            try:
-                total = wage * working_hours
-                print ("Wage of an Employee :",total," $")
-                #checking the Exceptions
-                if wage == 0:
-                    print (wage+'$')
-            except:
-                print ("Error employee is absent & wage is 0 ")
+            #Calculation
+            for i in range (working_days):
+                check = random.randint(1,3)
+                wage = switch_statement(check)
+                if (wage == 8):
+                    #print ("Full-Time Employee wage per day")
+                    emply_wage = wage*working_hours
+                    f_time = f_time + 1
+                elif ( wage == 4):
+                    # print ("Part-Time Employee wage per day")
+                    emply_wage = wage*working_hours
+                    p_time = p_time + 1
+                else:
+                    # print("Employe is Absent")
+                    count = count + 1 # count to know the Absent days of an employee
+                total = total + emply_wage
+            print ("Total Working days is :",working_days)
+            print ("Employee worked for full time :",f_time,"days")
+            print ("Employee worked for part time :",p_time,"days")
+            print ("Employee is absent for ",count,"days")
+            print ("Monthly wage of an Employee : ",total,"$")
 
 if __name__ == '__main__':
     emply_wage_presence()
