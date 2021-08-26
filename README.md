@@ -29,3 +29,6 @@
 ----------
 ### **UC-8** Store the Daily Wage along with the Total Wage
 - *Storing the Daily Wage along with the Total Wage*
+----------
+### **UC-9** Store the Day and the Daily Wage along with the Total Wage
+- *Storing the Day and the Daily Wage along with the Total Wage*
