@@ -2,8 +2,8 @@
 @Author: Javeed
 @Date: 2021-08-26
 @Last Modified by: Javeed
-@Last Modified time: 2021-08-26 16:41:26
-@Title : Calculate Employee Wage using Switche case
+@Last Modified time: 2021-08-26 20:22:06
+@Title : Calculate Monthly Employee Wage upto the given condition
 '''
 import random
 
@@ -13,6 +13,7 @@ full_time = 2
 part_time = 1
 wage = 0
 working_days = 20
+max_hours_in_month = 100
 def switch_statement(check):
     """
 Description:
@@ -31,15 +32,17 @@ Return:
 def emply_wage_presence():
             """
             Description:
-                Function description to Calculate the Monthly Wage
+                Function description to Calculate the Monthly Wage upto the condition
             Return:
-                Wage of an Employee per Month
+                Wage of an Employee per Month and working hours
             """
             #switcher
 
             #Variables
             working_hours = 20
             emply_wage = 0
+            total_working_hours = 0
+            total_working_days = 0
             total = 0
             count = 0
             f_time = 0
@@ -47,17 +50,22 @@ def emply_wage_presence():
             #wage = 0
             
             #Calculation
-            for i in range (working_days):
+            while (total_working_hours < max_hours_in_month and total_working_days < working_days):
+                # incrementing the total_working_days to statisfy the condition
+                total_working_days = total_working_days + 1
                 check = random.randint(1,3)
                 wage = switch_statement(check)
+                # incrementing the total_working_hours_per_days to statisfy the condition
                 if (wage == 8):
                     #print ("Full-Time Employee wage per day")
-                    emply_wage = wage*working_hours
+                    emply_wage = wage * working_hours
                     f_time = f_time + 1
+                    total_working_hours = total_working_hours + wage
                 elif ( wage == 4):
                     # print ("Part-Time Employee wage per day")
-                    emply_wage = wage*working_hours
+                    emply_wage = wage * working_hours
                     p_time = p_time + 1
+                    total_working_hours = total_working_hours + wage
                 else:
                     # print("Employe is Absent")
                     count = count + 1 # count to know the Absent days of an employee
@@ -66,7 +74,7 @@ def emply_wage_presence():
             print ("Employee worked for full time :",f_time,"days")
             print ("Employee worked for part time :",p_time,"days")
             print ("Employee is absent for ",count,"days")
-            print ("Monthly wage of an Employee : ",total,"$")
+            print ("Monthly wage of an Employee : ",total,"$","\nWorking hours of an Employee in month :",total_working_hours,"Hrs")
 
 if __name__ == '__main__':
     emply_wage_presence()
