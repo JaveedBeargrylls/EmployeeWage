@@ -26,3 +26,6 @@
 ----------
 ### **UC-7** Refactor the Code
 - *Refactor the Code of employee Wage*
+----------
+### **UC-8** Store the Daily Wage along with the Total Wage
+- *Storing the Daily Wage along with the Total Wage*
