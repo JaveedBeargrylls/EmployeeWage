@@ -20,3 +20,6 @@
 ### **UC-5** Calculating Wages for a Month
 - *Used the random function to get the random **Presence** of an employee*
 - *Calculated the Monthly wages of an Employee*
+----------
+### **UC-6** Calculating Wages for a Month upto the conditions
+- *Calculated the monthly wage and given conditions is Max hours 100 and days 20*
