@@ -3,7 +3,7 @@
 @Date: 2021-08-26
 @Last Modified by: Javeed
 @Last Modified time: 2021-08-26 20:30:06
-@Title : Refactor the Code of Employee wage
+@Title : Store the Daily Wage along with the Total Wage
 '''
 import random
 
@@ -32,9 +32,10 @@ Return:
 def emply_wage_presence():
             """
             Description:
-                Function description to Calculate the Monthly Wage upto the condition
+                Function description to Calculate the Monthly Wage upto the condition 
+                & to Store the Daily Wage along with the Total Wage
             Return:
-                Wage of an Employee per Month and working hours
+                Wage of an Employee per Month and working days & hours
             """
             #switcher
 
@@ -61,13 +62,18 @@ def emply_wage_presence():
                     emply_wage = wage * working_hours
                     f_time = f_time + 1
                     total_working_hours = total_working_hours + wage
+                    print ("----------\n","Day",total_working_days)
+                    print ("Full-Time working",emply_wage,"$")
                 elif ( wage == 4):
                     # print ("Part-Time Employee wage per day")
                     emply_wage = wage * working_hours
                     p_time = p_time + 1
                     total_working_hours = total_working_hours + wage
+                    print ("----------\n","Day",total_working_days)
+                    print ("Part-Time working",emply_wage,"$")
                 else:
-                    # print("Employe is Absent")
+                    print ("----------\n","Day",total_working_days)
+                    print ("Employee is Absent")
                     count = count + 1 # count to know the Absent days of an employee
                 total = total + emply_wage
             print ("Total Working days is :",working_days)
