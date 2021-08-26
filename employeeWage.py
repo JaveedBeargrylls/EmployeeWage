@@ -2,8 +2,8 @@
 @Author: Javeed
 @Date: 2021-08-26
 @Last Modified by: Javeed
-@Last Modified time: 2021-08-26 20:30:06
-@Title : Store the Daily Wage along with the Total Wage
+@Last Modified time: 2021-08-26 20:40:21
+@Title : Store the Day and the Daily Wage along with the Total Wage
 '''
 import random
 
@@ -33,7 +33,7 @@ def emply_wage_presence():
             """
             Description:
                 Function description to Calculate the Monthly Wage upto the condition 
-                & to Store the Daily Wage along with the Total Wage
+                & Store the Day and the Daily Wage along with the Total Wage
             Return:
                 Wage of an Employee per Month and working days & hours
             """
