@@ -2,8 +2,8 @@
 @Author: Javeed
 @Date: 2021-08-26
 @Last Modified by: Javeed
-@Last Modified time: 2021-08-26 20:22:06
-@Title : Calculate Monthly Employee Wage upto the given condition
+@Last Modified time: 2021-08-26 20:30:06
+@Title : Refactor the Code of Employee wage
 '''
 import random
 

@@ -23,3 +23,6 @@
 ----------
 ### **UC-6** Calculating Wages for a Month upto the conditions
 - *Calculated the monthly wage and given conditions is Max hours 100 and days 20*
+----------
+### **UC-7** Refactor the Code
+- *Refactor the Code of employee Wage*
